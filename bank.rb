@@ -14,11 +14,11 @@ attr_reader :balance
   end
 end
 
-#Test
+# #Test
 
-test = Bank.new
-puts test.balance
-test.increase_balance
-puts test.balance
-test.decrease_balance
-puts test.balance
+# test = Bank.new
+# puts test.balance
+# test.increase_balance
+# puts test.balance
+# test.decrease_balance
+# puts test.balance
