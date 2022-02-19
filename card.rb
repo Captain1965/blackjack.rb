@@ -18,7 +18,7 @@ attr_reader :suit, :points, :card
 end
 
 #Test
-# card = Card.new('A','♥')
+ card = Card.new('A','♥')
 # puts card.open_card
 # puts card.point
 

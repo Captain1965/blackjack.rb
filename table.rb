@@ -1,8 +1,6 @@
 require_relative 'card'
 
 class Table
-
-
  attr_reader :cards
 
  def initialize
@@ -22,12 +20,29 @@ class Table
     end
     cards.shuffle
   end
+
+  def hand_card
+    @cards.pop
+  end
+
 end
 
 # Test
-#table = Table.new
-# puts table.cards[1].open_card
+ table = Table.new
 
+ # card = Card.new('A','♥')
+ # card = Card.new('6','♥')
+ # card = Card.new('4','♥')
+# puts table.cards[1].open_card
+# puts table.cards[2].open_card
+# puts table.cards[-1].open_card
+# puts table.cards[-2].open_card
+# puts
+# puts table.hand_card.open_card
+# puts table.cards[1].open_card
+# puts table.cards[2].open_card
+# puts table.cards[-1].open_card
+# puts table.cards[-2].open_card
 
 
 
