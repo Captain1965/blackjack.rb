@@ -1,4 +1,8 @@
+require_relative 'card'
+
 class Table
+
+
  attr_reader :cards
 
  def initialize
@@ -19,6 +23,11 @@ class Table
     cards.shuffle
   end
 end
+
+# Test
+#table = Table.new
+# puts table.cards[1].open_card
+
 
 
 

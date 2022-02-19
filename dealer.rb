@@ -1,6 +1,10 @@
 require_relative ('bank')
+require_relative ('card')
+require_relative ('deck')
 
-class Dealer < Bank
+class Dealer
+include Deck
+
 attr_reader :name
 
   def initialize
