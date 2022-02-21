@@ -4,7 +4,6 @@ require_relative 'dealer'
 require_relative 'card'
 require_relative 'deck'
 require_relative 'table'
-require_relative 'show'
 
 puts 'Hello! Lets play! What is you name?'
 name = STDIN.gets.chomp.capitalize
@@ -17,11 +16,11 @@ bank.balance_player = 100
 loop do
   player.deck_user =[]
   dealer.deck_user =[]
-  puts 'Please take your cards'
+  puts " #{name} Please take your cards"
   2.times do
     player.deck_add(table.hand_card)
   end
-  puts '   You cards '
+  puts '   You cards     Dealer cards'
   player.open_cards
   2.times do
     dealer.deck_add(table.hand_card)
@@ -44,7 +43,7 @@ loop do
     puts
     dealer.open_cards
     bank.result(dealer.points,player.points)
-    puts "#{name}, do you want continue? Yes-1 No-2"
+    puts " #{name}, do you want continue? Yes-1 No-2"
     user_choise = STDIN.gets.chomp.to_i
   break if user_choise == 2
 end

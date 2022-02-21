@@ -12,7 +12,7 @@ attr_reader :name
   end
 
   def close_cards
-    @deck_user.each {|item|  print '   ***'}
+    @deck_user.each {|item|  print '     ***'}
   end
 
 end
