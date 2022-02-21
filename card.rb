@@ -1,24 +1,25 @@
 class Card
-attr_reader :suit, :points, :card
+attr_reader :suit, :point, :card
 
-  def initialize (card,suit)
+  def initialize (suit,card)
     @card = card
     @suit = suit
-    @points = points
+    @point = point
   end
 
   def open_card
-    puts "#{card} #{suit}"
+    print "   #{card} #{suit}"
   end
 
   def point
     return 11 if @card == "A"
     return 10 if ['K', 'Q', 'J'].include?(@card)
+    return @card.to_i if !['A','K','Q','J'].include?(@card)
   end
 end
 
 #Test
- card = Card.new('A','♥')
+# card = Card.new('♥','A')
 # puts card.open_card
 # puts card.point
 

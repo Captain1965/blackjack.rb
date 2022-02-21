@@ -1,4 +1,9 @@
+require_relative 'bank'
+require_relative 'player'
+require_relative 'dealer'
 require_relative 'card'
+require_relative 'deck'
+require_relative 'table'
 
 class Table
  attr_reader :cards
@@ -22,13 +27,13 @@ class Table
   end
 
   def hand_card
+    puts 'the deck is empty' if cards.empty?
     @cards.pop
   end
-
 end
 
 # Test
- table = Table.new
+# table = Table.new
 
  # card = Card.new('A','♥')
  # card = Card.new('6','♥')

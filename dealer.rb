@@ -2,15 +2,19 @@ require_relative ('bank')
 require_relative ('card')
 require_relative ('deck')
 
-class Dealer
+class Dealer < Bank
 include Deck
-
 attr_reader :name
 
   def initialize
     @name = 'Dealer'
-    super()
+    @deck_user =[]
   end
+
+  def close_cards
+    @deck_user.each {|item|  print '   ***'}
+  end
+
 end
 
 # #Test
