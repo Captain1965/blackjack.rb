@@ -7,9 +7,10 @@ module Deck
 
   def points
     @points = 0
+    variable_alt = 0
     @deck_user.each do |item|
       @points += item.point
-      item == 11? variable_alt = 10: variable_alt = 0
+      item == 11? variable_alt += 10: variable_alt = 0
     end
     @points -=variable_alt if @points > 21
     @points
